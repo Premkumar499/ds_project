@@ -39,15 +39,40 @@ async function searchBook() {
               <h3>📖 Description</h3>
               <p>${book.description}</p>
             </div>
+            <div class="back-button-container">
+              <button class="back-button" onclick="goBack()">🔙 Search Again</button>
+            </div>
           </div>
         </div>
       `;
     } else {
-      resultDiv.innerHTML = `<p class="error">❌ Book not found. Try another ID.</p>`;
+      resultDiv.innerHTML = `
+        <p class="error">❌ Book not found. Try another ID.</p>
+        <div class="back-button-container">
+          <button class="back-button" onclick="goBack()">🔙 Search Again</button>
+        </div>
+      `;
     }
   } catch (error) {
-    resultDiv.innerHTML = `<p class="error">⚠️ Error: ${error.message}</p>`;
+    resultDiv.innerHTML = `
+      <p class="error">⚠️ Error: ${error.message}</p>
+      <div class="back-button-container">
+        <button class="back-button" onclick="goBack()">🔙 Search Again</button>
+      </div>
+    `;
   }
+}
+
+function goBack() {
+  const resultDiv = document.getElementById("result");
+  const searchInput = document.getElementById("searchInput");
+  
+  // Clear the result
+  resultDiv.innerHTML = "";
+  
+  // Clear the search input and focus on it
+  searchInput.value = "";
+  searchInput.focus();
 }
 
 // Add Enter key support
