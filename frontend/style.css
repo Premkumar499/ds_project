@@ -202,3 +202,12 @@ button:hover {
   transform: translateY(0);
   box-shadow: 0 2px 8px rgba(76, 175, 80, 0.3);
 }
+
+/* ID display style */
+.book-id {
+  background: #e3f2fd;
+  padding: 5px 10px;
+  border-radius: 5px;
+  display: inline-block;
+  margin: 5px 0;
+}

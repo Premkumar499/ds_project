@@ -8,14 +8,37 @@ async function searchBook() {
     return;
   }
   
-  resultDiv.innerHTML = "<p>🔍 Searching...</p>";
+  resultDiv.innerHTML = "<p>🔍 Searching using hashmap...</p>";
 
   try {
-    const response = await fetch("books.json");
-    if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
-    const books = await response.json();
-    const book = books.find(b => b.id == id);
+    // First try to use the hashmap API backend
+    let book = null;
+    let searchMethod = "hashmap";
+    let hashBucket = null;
+    
+    try {
+      const apiResponse = await fetch(`http://localhost:8080/search/${id}`);
+      if (apiResponse.ok) {
+        const apiData = await apiResponse.json();
+        if (apiData.success) {
+          book = apiData.book;
+          searchMethod = "hashmap";
+          hashBucket = apiData.hashBucket;
+        }
+      }
+    } catch (apiError) {
+      console.log("Backend API not available, falling back to JSON search");
+    }
+    
+    // Fallback to JSON file search if API fails
+    if (!book) {
+      const response = await fetch("books.json");
+      if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+      
+      const books = await response.json();
+      book = books.find(b => b.id == id);
+      searchMethod = "json-linear";
+    }
 
     if (book) {
       resultDiv.innerHTML = `
@@ -34,6 +57,7 @@ async function searchBook() {
               <p class="book-author"><strong>✍️ Author:</strong> ${book.author}</p>
               <p class="book-genre"><strong>📚 Genre:</strong> ${book.genre}</p>
               <p class="book-year"><strong>📅 Published:</strong> ${book.year}</p>
+              <p class="book-id"><strong>🔢 ID:</strong> ${book.id}</p>
             </div>
             <div class="book-description">
               <h3>📖 Description</h3>

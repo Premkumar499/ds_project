@@ -1,8 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <unistd.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <cjson/cJSON.h>
 
-#define TABLE_SIZE 10
+#define TABLE_SIZE 101  // Prime number for better distribution
+#define PORT 8080
 
 typedef struct Book {
     int id;
@@ -17,9 +22,16 @@ typedef struct Book {
 
 Book* hashTable[TABLE_SIZE];
 
-// Hash function (simple modulo)
+// Hash function (better distribution using prime)
 int hashFunction(int id) {
     return id % TABLE_SIZE;
+}
+
+// Initialize hash table
+void initHashTable() {
+    for (int i = 0; i < TABLE_SIZE; i++) {
+        hashTable[i] = NULL;
+    }
 }
 
 // Insert a book into hash table
@@ -35,18 +47,123 @@ void insertBook(int id, char* title, char* author, char* genre, int year, char* 
     strcpy(newBook->description, description);
     newBook->next = hashTable[index];
     hashTable[index] = newBook;
+    printf("📚 Loaded: %s (ID: %d)\n", title, id);
 }
 
-// Search book by ID
+// Search book by ID using hashmap
 Book* searchBook(int id) {
     int index = hashFunction(id);
     Book* temp = hashTable[index];
+    printf("🔍 Searching in hash bucket %d for ID %d\n", index, id);
+    
     while (temp != NULL) {
-        if (temp->id == id)
+        if (temp->id == id) {
+            printf("✅ Found book in hashmap!\n");
             return temp;
+        }
         temp = temp->next;
     }
+    printf("❌ Book not found in hashmap\n");
     return NULL;
+}
+
+// Load books from JSON file
+int loadBooksFromJSON() {
+    FILE* file = fopen("../frontend/books.json", "r");
+    if (!file) {
+        printf("❌ Error: Cannot open books.json\n");
+        return 0;
+    }
+
+    fseek(file, 0, SEEK_END);
+    long length = ftell(file);
+    fseek(file, 0, SEEK_SET);
+    
+    char* data = malloc(length + 1);
+    fread(data, 1, length, file);
+    data[length] = '\0';
+    fclose(file);
+
+    cJSON* json = cJSON_Parse(data);
+    if (!json) {
+        printf("❌ Error parsing JSON\n");
+        free(data);
+        return 0;
+    }
+
+    int bookCount = 0;
+    cJSON* book = NULL;
+    cJSON_ArrayForEach(book, json) {
+        cJSON* id = cJSON_GetObjectItem(book, "id");
+        cJSON* title = cJSON_GetObjectItem(book, "title");
+        cJSON* author = cJSON_GetObjectItem(book, "author");
+        cJSON* genre = cJSON_GetObjectItem(book, "genre");
+        cJSON* year = cJSON_GetObjectItem(book, "year");
+        cJSON* image = cJSON_GetObjectItem(book, "image");
+        cJSON* description = cJSON_GetObjectItem(book, "description");
+
+        if (id && title && author && genre && year && image && description) {
+            insertBook(
+                id->valueint,
+                title->valuestring,
+                author->valuestring,
+                genre->valuestring,
+                year->valueint,
+                image->valuestring,
+                description->valuestring
+            );
+            bookCount++;
+        }
+    }
+
+    cJSON_Delete(json);
+    free(data);
+    printf("✅ Loaded %d books into hashmap\n", bookCount);
+    return bookCount;
+}
+
+// Send HTTP response
+void sendResponse(int client_socket, char* response) {
+    char header[] = "HTTP/1.1 200 OK\r\n"
+                   "Content-Type: application/json\r\n"
+                   "Access-Control-Allow-Origin: *\r\n"
+                   "Access-Control-Allow-Methods: GET, POST, OPTIONS\r\n"
+                   "Access-Control-Allow-Headers: Content-Type\r\n\r\n";
+    
+    send(client_socket, header, strlen(header), 0);
+    send(client_socket, response, strlen(response), 0);
+}
+
+// Handle search request
+void handleSearchRequest(int client_socket, int book_id) {
+    Book* book = searchBook(book_id);
+    
+    if (book) {
+        char response[2048];
+        snprintf(response, sizeof(response),
+            "{"
+            "\"success\": true,"
+            "\"book\": {"
+            "\"id\": %d,"
+            "\"title\": \"%s\","
+            "\"author\": \"%s\","
+            "\"genre\": \"%s\","
+            "\"year\": %d,"
+            "\"image\": \"%s\","
+            "\"description\": \"%s\""
+            "},"
+            "\"searchMethod\": \"hashmap\","
+            "\"hashBucket\": %d"
+            "}",
+            book->id, book->title, book->author, book->genre, 
+            book->year, book->image, book->description,
+            hashFunction(book_id)
+        );
+        sendResponse(client_socket, response);
+    } else {
+        char response[] = "{\"success\": false, \"message\": \"Book not found\", \"searchMethod\": \"hashmap\"}";
+        sendResponse(client_socket, response);
+    }
 }
 
 // Export data to JSON file - Export to frontend directory
@@ -78,34 +195,83 @@ void exportToJSON() {
 }
 
 int main() {
-    // Load data from the shared frontend JSON file
-    insertBook(101, "The C Programming Language", "Brian Kernighan & Dennis Ritchie", "Programming", 
-               1988, "https://covers.openlibrary.org/b/isbn/0131103628-L.jpg", 
-               "The definitive guide to C programming by the creators of the language. Known as the 'K&R' book, it's the classic reference for learning C.");
+    printf("🚀 Starting Library Management System Backend\n");
+    printf("===============================================\n");
     
-    insertBook(202, "Data Structures and Algorithm Analysis in C++", "Mark Allen Weiss", "Computer Science", 
-               2014, "https://covers.openlibrary.org/b/isbn/9780132847377-L.jpg", 
-               "A comprehensive textbook covering data structures and algorithms with C++ implementations. Widely used in computer science courses.");
+    // Initialize hash table
+    initHashTable();
     
-    insertBook(303, "Artificial Intelligence: A Modern Approach", "Stuart Russell & Peter Norvig", "Artificial Intelligence", 
-               2020, "https://covers.openlibrary.org/b/isbn/9780134610993-L.jpg", 
-               "The leading textbook in artificial intelligence. Comprehensive coverage of AI concepts, algorithms, and applications used worldwide.");
+    // Load books from JSON
+    int bookCount = loadBooksFromJSON();
+    if (bookCount == 0) {
+        printf("❌ Failed to load books. Exiting.\n");
+        return 1;
+    }
     
-    insertBook(404, "Python Crash Course", "Eric Matthes", "Programming", 
-               2019, "https://covers.openlibrary.org/b/isbn/9781593279288-L.jpg", 
-               "A hands-on introduction to programming with Python. Learn programming fundamentals and build practical projects.");
-
-    printf("Enter Book ID to search: ");
-    int id;
-    scanf("%d", &id);
-
-    Book* found = searchBook(id);
-    if (found)
-        printf("Book Found: %s by %s (%s, %d)\n", found->title, found->author, found->genre, found->year);
-    else
-        printf("Book Not Found.\n");
-
-    exportToJSON();
-    printf("Book data exported to shared books.json\n");
+    printf("\n🌐 Starting API server on port %d...\n", PORT);
+    
+    // Create socket
+    int server_socket = socket(AF_INET, SOCK_STREAM, 0);
+    if (server_socket < 0) {
+        printf("❌ Error creating socket\n");
+        return 1;
+    }
+    
+    // Allow socket reuse
+    int opt = 1;
+    setsockopt(server_socket, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+    
+    // Configure server address
+    struct sockaddr_in server_addr;
+    server_addr.sin_family = AF_INET;
+    server_addr.sin_addr.s_addr = INADDR_ANY;
+    server_addr.sin_port = htons(PORT);
+    
+    // Bind socket
+    if (bind(server_socket, (struct sockaddr*)&server_addr, sizeof(server_addr)) < 0) {
+        printf("❌ Error binding socket\n");
+        return 1;
+    }
+    
+    // Listen for connections
+    if (listen(server_socket, 10) < 0) {
+        printf("❌ Error listening on socket\n");
+        return 1;
+    }
+    
+    printf("✅ Backend API server running at http://localhost:%d\n", PORT);
+    printf("📖 Hashmap loaded with %d books\n", bookCount);
+    printf("🔍 Try: http://localhost:%d/search/101\n", PORT);
+    printf("Press Ctrl+C to stop\n\n");
+    
+    // Handle requests
+    while (1) {
+        struct sockaddr_in client_addr;
+        socklen_t client_len = sizeof(client_addr);
+        int client_socket = accept(server_socket, (struct sockaddr*)&client_addr, &client_len);
+        
+        if (client_socket < 0) continue;
+        
+        char buffer[1024];
+        recv(client_socket, buffer, sizeof(buffer), 0);
+        
+        // Parse HTTP request
+        if (strncmp(buffer, "GET /search/", 12) == 0) {
+            char* id_str = buffer + 12;
+            int book_id = atoi(id_str);
+            printf("\n🔍 API Request: Search for book ID %d\n", book_id);
+            handleSearchRequest(client_socket, book_id);
+        } else if (strncmp(buffer, "GET /health", 11) == 0) {
+            char response[] = "{\"status\": \"healthy\", \"books\": \"loaded\", \"backend\": \"hashmap\"}";
+            sendResponse(client_socket, response);
+        } else {
+            char response[] = "{\"error\": \"Invalid endpoint. Use /search/{id} or /health\"}";
+            sendResponse(client_socket, response);
+        }
+        
+        close(client_socket);
+    }
+    
+    close(server_socket);
     return 0;
 }
