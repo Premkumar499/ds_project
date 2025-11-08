@@ -1,0 +1,12 @@
+{
+  "name": "library-book-finder",
+  "version": "1.0.0",
+  "description": "A library book finder using hashmap data structure with HTML/CSS/JS frontend",
+  "scripts": {
+    "build": "echo 'Static site, no build needed'",
+    "start": "echo 'Static site deployed to Vercel'"
+  },
+  "keywords": ["library", "books", "search", "hashmap", "data-structures"],
+  "author": "Premkumar",
+  "license": "MIT"
+}
