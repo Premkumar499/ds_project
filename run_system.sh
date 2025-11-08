@@ -2,11 +2,13 @@
 
 # Library Management System - Auto Run Script
 # This script automatically starts both backend and frontend
+# Now using unified JSON file for both services
 
 clear
 echo "================================"
 echo "Library Management System"
 echo "Auto-Starting Backend & Frontend"
+echo "Using Shared JSON Database"
 echo "================================"
 echo ""
 
@@ -43,6 +45,10 @@ fi
 echo ""
 echo "🔗 Services Running:"
 echo "   Frontend: http://localhost:8000"
+echo "   Shared JSON: frontend/books.json"
+echo ""
+echo "📖 To interact with backend:"
+echo "   cd backend && ./library_hashmap"
 echo ""
 echo "Press Ctrl+C to stop all services"
 echo "================================"

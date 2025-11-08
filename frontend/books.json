@@ -9,6 +9,897 @@
     "description": "The definitive guide to C programming by the creators of the language. Known as the 'K&R' book, it's the classic reference for learning C."
   },
   {
+    "id": 102,
+    "title": "Clean Code",
+    "author": "Robert C. Martin",
+    "genre": "Programming",
+    "year": 2008,
+    "image": "https://covers.openlibrary.org/b/isbn/9780132350884-L.jpg",
+    "description": "A handbook of agile software craftsmanship. Learn how to write clean, readable, and maintainable code."
+  },
+  {
+    "id": 103,
+    "title": "Design Patterns",
+    "author": "Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides",
+    "genre": "Programming",
+    "year": 1994,
+    "image": "https://covers.openlibrary.org/b/isbn/9780201633610-L.jpg",
+    "description": "Elements of reusable object-oriented software. The classic book on design patterns by the Gang of Four."
+  },
+  {
+    "id": 104,
+    "title": "Introduction to Algorithms",
+    "author": "Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein",
+    "genre": "Computer Science",
+    "year": 2009,
+    "image": "https://covers.openlibrary.org/b/isbn/9780262033848-L.jpg",
+    "description": "Comprehensive introduction to algorithms and data structures. Known as the CLRS book, it's the standard reference."
+  },
+  {
+    "id": 105,
+    "title": "JavaScript: The Good Parts",
+    "author": "Douglas Crockford",
+    "genre": "Programming",
+    "year": 2008,
+    "image": "https://covers.openlibrary.org/b/isbn/9780596517748-L.jpg",
+    "description": "A guide to the beautiful, elegant, lightweight and expressive features of JavaScript."
+  },
+  {
+    "id": 106,
+    "title": "The Pragmatic Programmer",
+    "author": "David Thomas & Andrew Hunt",
+    "genre": "Programming",
+    "year": 2019,
+    "image": "https://covers.openlibrary.org/b/isbn/9780135957059-L.jpg",
+    "description": "Your journey to mastery. A practical guide to becoming a better programmer."
+  },
+  {
+    "id": 107,
+    "title": "You Don't Know JS",
+    "author": "Kyle Simpson",
+    "genre": "Programming",
+    "year": 2014,
+    "image": "https://covers.openlibrary.org/b/isbn/9781491924464-L.jpg",
+    "description": "A deep dive into the core mechanisms of the JavaScript language."
+  },
+  {
+    "id": 108,
+    "title": "Refactoring",
+    "author": "Martin Fowler",
+    "genre": "Programming",
+    "year": 2018,
+    "image": "https://covers.openlibrary.org/b/isbn/9780134757599-L.jpg",
+    "description": "Improving the design of existing code. Learn how to improve code structure without changing functionality."
+  },
+  {
+    "id": 109,
+    "title": "Head First Design Patterns",
+    "author": "Eric Freeman, Elisabeth Robson",
+    "genre": "Programming",
+    "year": 2014,
+    "image": "https://covers.openlibrary.org/b/isbn/9781449331818-L.jpg",
+    "description": "A brain-friendly guide to design patterns. Learn design patterns in an engaging and memorable way."
+  },
+  {
+    "id": 110,
+    "title": "Effective Java",
+    "author": "Joshua Bloch",
+    "genre": "Programming",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9780134685991-L.jpg",
+    "description": "The definitive guide to Java programming best practices from the language's architect."
+  },
+  {
+    "id": 111,
+    "title": "Code Complete",
+    "author": "Steve McConnell",
+    "genre": "Programming",
+    "year": 2004,
+    "image": "https://covers.openlibrary.org/b/isbn/9780735619678-L.jpg",
+    "description": "A practical handbook of software construction. Comprehensive guide to software development best practices."
+  },
+  {
+    "id": 112,
+    "title": "The Mythical Man-Month",
+    "author": "Frederick P. Brooks Jr.",
+    "genre": "Software Engineering",
+    "year": 1995,
+    "image": "https://covers.openlibrary.org/b/isbn/9780201835953-L.jpg",
+    "description": "Essays on software engineering. Classic insights into software project management and development."
+  },
+  {
+    "id": 113,
+    "title": "Cracking the Coding Interview",
+    "author": "Gayle Laakmann McDowell",
+    "genre": "Programming",
+    "year": 2015,
+    "image": "https://covers.openlibrary.org/b/isbn/9780984782857-L.jpg",
+    "description": "189 programming questions and solutions. Essential preparation for technical interviews."
+  },
+  {
+    "id": 114,
+    "title": "System Design Interview",
+    "author": "Alex Xu",
+    "genre": "Software Engineering",
+    "year": 2020,
+    "image": "https://covers.openlibrary.org/b/isbn/9798664653403-L.jpg",
+    "description": "An insider's guide to system design interviews. Learn how to design large-scale distributed systems."
+  },
+  {
+    "id": 115,
+    "title": "Designing Data-Intensive Applications",
+    "author": "Martin Kleppmann",
+    "genre": "Software Engineering",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9781449373320-L.jpg",
+    "description": "The big ideas behind reliable, scalable, and maintainable systems."
+  },
+  {
+    "id": 116,
+    "title": "Operating System Concepts",
+    "author": "Abraham Silberschatz, Peter B. Galvin, Greg Gagne",
+    "genre": "Computer Science",
+    "year": 2018,
+    "image": "https://covers.openlibrary.org/b/isbn/9781119320913-L.jpg",
+    "description": "Comprehensive introduction to operating systems. Known as the 'Dinosaur Book' in academic circles."
+  },
+  {
+    "id": 117,
+    "title": "Computer Networks",
+    "author": "Andrew S. Tanenbaum, David J. Wetherall",
+    "genre": "Computer Science",
+    "year": 2010,
+    "image": "https://covers.openlibrary.org/b/isbn/9780132126953-L.jpg",
+    "description": "Comprehensive introduction to computer networking concepts and protocols."
+  },
+  {
+    "id": 118,
+    "title": "Database System Concepts",
+    "author": "Abraham Silberschatz, Henry F. Korth, S. Sudarshan",
+    "genre": "Database",
+    "year": 2019,
+    "image": "https://covers.openlibrary.org/b/isbn/9780078022159-L.jpg",
+    "description": "Comprehensive introduction to database management systems and concepts."
+  },
+  {
+    "id": 119,
+    "title": "Machine Learning Yearning",
+    "author": "Andrew Ng",
+    "genre": "Machine Learning",
+    "year": 2018,
+    "image": "https://covers.openlibrary.org/b/isbn/9780999825006-L.jpg",
+    "description": "Technical strategy for AI engineers. Practical advice on machine learning project structure."
+  },
+  {
+    "id": 120,
+    "title": "Pattern Recognition and Machine Learning",
+    "author": "Christopher Bishop",
+    "genre": "Machine Learning",
+    "year": 2006,
+    "image": "https://covers.openlibrary.org/b/isbn/9780387310732-L.jpg",
+    "description": "Comprehensive introduction to machine learning from a Bayesian perspective."
+  },
+  {
+    "id": 121,
+    "title": "Deep Learning",
+    "author": "Ian Goodfellow, Yoshua Bengio, Aaron Courville",
+    "genre": "Machine Learning",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9780262035613-L.jpg",
+    "description": "Comprehensive textbook on deep learning written by pioneers in the field."
+  },
+  {
+    "id": 122,
+    "title": "Hands-On Machine Learning",
+    "author": "Aurélien Géron",
+    "genre": "Machine Learning",
+    "year": 2019,
+    "image": "https://covers.openlibrary.org/b/isbn/9781492032649-L.jpg",
+    "description": "Practical guide to machine learning with Scikit-Learn, Keras, and TensorFlow."
+  },
+  {
+    "id": 123,
+    "title": "The Elements of Statistical Learning",
+    "author": "Trevor Hastie, Robert Tibshirani, Jerome Friedman",
+    "genre": "Statistics",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9780387848570-L.jpg",
+    "description": "Comprehensive reference on statistical learning methods and data mining."
+  },
+  {
+    "id": 124,
+    "title": "Python for Data Analysis",
+    "author": "Wes McKinney",
+    "genre": "Data Science",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9781491957660-L.jpg",
+    "description": "Data wrangling with Pandas, NumPy, and IPython by the creator of Pandas."
+  },
+  {
+    "id": 125,
+    "title": "R for Data Science",
+    "author": "Hadley Wickham, Garrett Grolemund",
+    "genre": "Data Science",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9781491910399-L.jpg",
+    "description": "Import, tidy, transform, visualize, and model data with R."
+  },
+  {
+    "id": 126,
+    "title": "The Data Science Handbook",
+    "author": "Field Cady",
+    "genre": "Data Science",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9781119092940-L.jpg",
+    "description": "Comprehensive guide to data science methods and techniques."
+  },
+  {
+    "id": 127,
+    "title": "Linear Algebra and Its Applications",
+    "author": "David C. Lay, Steven R. Lay, Judi J. McDonald",
+    "genre": "Mathematics",
+    "year": 2015,
+    "image": "https://covers.openlibrary.org/b/isbn/9780321982384-L.jpg",
+    "description": "Comprehensive introduction to linear algebra with modern applications."
+  },
+  {
+    "id": 128,
+    "title": "Calculus: Early Transcendentals",
+    "author": "James Stewart",
+    "genre": "Mathematics",
+    "year": 2015,
+    "image": "https://covers.openlibrary.org/b/isbn/9781285741550-L.jpg",
+    "description": "Comprehensive calculus textbook with clear explanations and examples."
+  },
+  {
+    "id": 129,
+    "title": "Discrete Mathematics and Its Applications",
+    "author": "Kenneth H. Rosen",
+    "genre": "Mathematics",
+    "year": 2018,
+    "image": "https://covers.openlibrary.org/b/isbn/9781259676512-L.jpg",
+    "description": "Comprehensive introduction to discrete mathematics for computer science."
+  },
+  {
+    "id": 130,
+    "title": "Probability and Statistics",
+    "author": "Morris H. DeGroot, Mark J. Schervish",
+    "genre": "Statistics",
+    "year": 2011,
+    "image": "https://covers.openlibrary.org/b/isbn/9780321500465-L.jpg",
+    "description": "Comprehensive introduction to probability theory and statistical inference."
+  },
+  {
+    "id": 131,
+    "title": "Modern Physics",
+    "author": "Paul A. Tipler, Ralph A. Llewellyn",
+    "genre": "Physics",
+    "year": 2012,
+    "image": "https://covers.openlibrary.org/b/isbn/9781429250788-L.jpg",
+    "description": "Comprehensive introduction to modern physics including quantum mechanics and relativity."
+  },
+  {
+    "id": 132,
+    "title": "Fundamentals of Physics",
+    "author": "David Halliday, Robert Resnick, Jearl Walker",
+    "genre": "Physics",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9781118230718-L.jpg",
+    "description": "Comprehensive introduction to physics with clear explanations and examples."
+  },
+  {
+    "id": 133,
+    "title": "Organic Chemistry",
+    "author": "Paula Yurkanis Bruice",
+    "genre": "Chemistry",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9780134042282-L.jpg",
+    "description": "Comprehensive introduction to organic chemistry with mechanisms and synthesis."
+  },
+  {
+    "id": 134,
+    "title": "General Chemistry",
+    "author": "Darrell Ebbing, Steven D. Gammon",
+    "genre": "Chemistry",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9781305580343-L.jpg",
+    "description": "Comprehensive introduction to general chemistry principles and applications."
+  },
+  {
+    "id": 135,
+    "title": "Campbell Biology",
+    "author": "Jane B. Reece, Lisa A. Urry, Michael L. Cain, Steven A. Wasserman",
+    "genre": "Biology",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9780134093413-L.jpg",
+    "description": "Comprehensive introduction to biology covering molecular to ecosystem levels."
+  },
+  {
+    "id": 136,
+    "title": "Molecular Biology of the Cell",
+    "author": "Bruce Alberts, Alexander Johnson, Julian Lewis",
+    "genre": "Biology",
+    "year": 2014,
+    "image": "https://covers.openlibrary.org/b/isbn/9780815344322-L.jpg",
+    "description": "Comprehensive textbook on cell biology and molecular mechanisms."
+  },
+  {
+    "id": 137,
+    "title": "The Art of Computer Programming",
+    "author": "Donald E. Knuth",
+    "genre": "Computer Science",
+    "year": 2011,
+    "image": "https://covers.openlibrary.org/b/isbn/9780321751041-L.jpg",
+    "description": "Multi-volume work on computer programming algorithms by the master of the field."
+  },
+  {
+    "id": 138,
+    "title": "Compilers: Principles, Techniques, and Tools",
+    "author": "Alfred V. Aho, Monica S. Lam, Ravi Sethi, Jeffrey D. Ullman",
+    "genre": "Computer Science",
+    "year": 2006,
+    "image": "https://covers.openlibrary.org/b/isbn/9780321486813-L.jpg",
+    "description": "The Dragon Book. Comprehensive guide to compiler design and implementation."
+  },
+  {
+    "id": 139,
+    "title": "Computer Organization and Design",
+    "author": "David A. Patterson, John L. Hennessy",
+    "genre": "Computer Science",
+    "year": 2020,
+    "image": "https://covers.openlibrary.org/b/isbn/9780128122754-L.jpg",
+    "description": "The hardware/software interface. Comprehensive guide to computer architecture."
+  },
+  {
+    "id": 140,
+    "title": "Software Engineering",
+    "author": "Ian Sommerville",
+    "genre": "Software Engineering",
+    "year": 2015,
+    "image": "https://covers.openlibrary.org/b/isbn/9780133943030-L.jpg",
+    "description": "Comprehensive introduction to software engineering principles and practices."
+  },
+  {
+    "id": 141,
+    "title": "Microservices Patterns",
+    "author": "Chris Richardson",
+    "genre": "Software Engineering",
+    "year": 2018,
+    "image": "https://covers.openlibrary.org/b/isbn/9781617294549-L.jpg",
+    "description": "With examples in Java. Practical guide to microservices architecture."
+  },
+  {
+    "id": 142,
+    "title": "Building Microservices",
+    "author": "Sam Newman",
+    "genre": "Software Engineering",
+    "year": 2021,
+    "image": "https://covers.openlibrary.org/b/isbn/9781492034025-L.jpg",
+    "description": "Designing fine-grained systems. Guide to microservices design and implementation."
+  },
+  {
+    "id": 143,
+    "title": "Clean Architecture",
+    "author": "Robert C. Martin",
+    "genre": "Software Engineering",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9780134494166-L.jpg",
+    "description": "A craftsman's guide to software structure and design."
+  },
+  {
+    "id": 144,
+    "title": "Domain-Driven Design",
+    "author": "Eric Evans",
+    "genre": "Software Engineering",
+    "year": 2003,
+    "image": "https://covers.openlibrary.org/b/isbn/9780321125217-L.jpg",
+    "description": "Tackling complexity in the heart of software. Guide to domain modeling."
+  },
+  {
+    "id": 145,
+    "title": "Test-Driven Development",
+    "author": "Kent Beck",
+    "genre": "Programming",
+    "year": 2002,
+    "image": "https://covers.openlibrary.org/b/isbn/9780321146533-L.jpg",
+    "description": "By example. Learn TDD through practical examples and exercises."
+  },
+  {
+    "id": 146,
+    "title": "Continuous Delivery",
+    "author": "Jez Humble, David Farley",
+    "genre": "Software Engineering",
+    "year": 2010,
+    "image": "https://covers.openlibrary.org/b/isbn/9780321601919-L.jpg",
+    "description": "Reliable software releases through build, test, and deployment automation."
+  },
+  {
+    "id": 147,
+    "title": "Site Reliability Engineering",
+    "author": "Niall Richard Murphy, Betsy Beyer, Chris Jones, Jennifer Petoff",
+    "genre": "Software Engineering",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9781491929124-L.jpg",
+    "description": "How Google runs production systems. Guide to SRE principles and practices."
+  },
+  {
+    "id": 148,
+    "title": "DevOps Handbook",
+    "author": "Gene Kim, Jez Humble, Patrick Debois, John Willis",
+    "genre": "Software Engineering",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9781942788003-L.jpg",
+    "description": "How to create world-class agility, reliability, and security in technology organizations."
+  },
+  {
+    "id": 149,
+    "title": "Kubernetes in Action",
+    "author": "Marko Lukša",
+    "genre": "DevOps",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9781617293726-L.jpg",
+    "description": "Comprehensive guide to Kubernetes container orchestration platform."
+  },
+  {
+    "id": 150,
+    "title": "Docker Deep Dive",
+    "author": "Nigel Poulton",
+    "genre": "DevOps",
+    "year": 2020,
+    "image": "https://covers.openlibrary.org/b/isbn/9781521822807-L.jpg",
+    "description": "Comprehensive guide to Docker containerization technology."
+  },
+  {
+    "id": 151,
+    "title": "AWS Certified Solutions Architect Study Guide",
+    "author": "Ben Piper, David Clinton",
+    "genre": "Cloud Computing",
+    "year": 2020,
+    "image": "https://covers.openlibrary.org/b/isbn/9781119713081-L.jpg",
+    "description": "Associate exam study guide for AWS certification."
+  },
+  {
+    "id": 152,
+    "title": "Google Cloud Platform in Action",
+    "author": "JJ Geewax",
+    "genre": "Cloud Computing",
+    "year": 2018,
+    "image": "https://covers.openlibrary.org/b/isbn/9781617293528-L.jpg",
+    "description": "Comprehensive guide to Google Cloud Platform services and architecture."
+  },
+  {
+    "id": 153,
+    "title": "Learning React",
+    "author": "Alex Banks, Eve Porcello",
+    "genre": "Web Development",
+    "year": 2020,
+    "image": "https://covers.openlibrary.org/b/isbn/9781492051718-L.jpg",
+    "description": "Modern patterns for developing React apps. Learn React from the ground up."
+  },
+  {
+    "id": 154,
+    "title": "Eloquent JavaScript",
+    "author": "Marijn Haverbeke",
+    "genre": "Web Development",
+    "year": 2018,
+    "image": "https://covers.openlibrary.org/b/isbn/9781593279509-L.jpg",
+    "description": "A modern introduction to programming with JavaScript and web development."
+  },
+  {
+    "id": 155,
+    "title": "CSS: The Definitive Guide",
+    "author": "Eric A. Meyer, Estelle Weyl",
+    "genre": "Web Development",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9781449393199-L.jpg",
+    "description": "Visual presentation for the web. Comprehensive guide to CSS."
+  },
+  {
+    "id": 156,
+    "title": "HTML and CSS: Design and Build Websites",
+    "author": "Jon Duckett",
+    "genre": "Web Development",
+    "year": 2011,
+    "image": "https://covers.openlibrary.org/b/isbn/9781118008188-L.jpg",
+    "description": "Visual guide to HTML and CSS for building modern websites."
+  },
+  {
+    "id": 157,
+    "title": "Node.js in Action",
+    "author": "Mike Cantelon, Marc Harter, TJ Holowaychuk, Nathan Rajlich",
+    "genre": "Web Development",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9781617292576-L.jpg",
+    "description": "Comprehensive guide to server-side JavaScript with Node.js."
+  },
+  {
+    "id": 158,
+    "title": "Express in Action",
+    "author": "Evan Hahn",
+    "genre": "Web Development",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9781617292422-L.jpg",
+    "description": "Writing, building, and testing Node.js applications with Express."
+  },
+  {
+    "id": 159,
+    "title": "Vue.js 3 Up and Running",
+    "author": "Callum Macrae",
+    "genre": "Web Development",
+    "year": 2020,
+    "image": "https://covers.openlibrary.org/b/isbn/9781492077947-L.jpg",
+    "description": "Building accessible and performant web apps with Vue.js 3."
+  },
+  {
+    "id": 160,
+    "title": "Angular: Up and Running",
+    "author": "Shyam Seshadri",
+    "genre": "Web Development",
+    "year": 2018,
+    "image": "https://covers.openlibrary.org/b/isbn/9781491999820-L.jpg",
+    "description": "Learning Angular step by step. Build modern web applications with Angular."
+  },
+  {
+    "id": 161,
+    "title": "iOS Programming: The Big Nerd Ranch Guide",
+    "author": "Christian Keur, Aaron Hillegass",
+    "genre": "Mobile Development",
+    "year": 2020,
+    "image": "https://covers.openlibrary.org/b/isbn/9780135264027-L.jpg",
+    "description": "Comprehensive guide to iOS app development with Swift and Xcode."
+  },
+  {
+    "id": 162,
+    "title": "Android Programming: The Big Nerd Ranch Guide",
+    "author": "Bill Phillips, Chris Stewart, Kristin Marsicano",
+    "genre": "Mobile Development",
+    "year": 2019,
+    "image": "https://covers.openlibrary.org/b/isbn/9780135245125-L.jpg",
+    "description": "Comprehensive guide to Android app development with Kotlin and Java."
+  },
+  {
+    "id": 163,
+    "title": "React Native in Action",
+    "author": "Nader Dabit",
+    "genre": "Mobile Development",
+    "year": 2019,
+    "image": "https://covers.openlibrary.org/b/isbn/9781617294051-L.jpg",
+    "description": "Developing iOS and Android apps with JavaScript and React Native."
+  },
+  {
+    "id": 164,
+    "title": "Flutter in Action",
+    "author": "Eric Windmill",
+    "genre": "Mobile Development",
+    "year": 2019,
+    "image": "https://covers.openlibrary.org/b/isbn/9781617296147-L.jpg",
+    "description": "Cross-platform mobile app development with Dart and Flutter."
+  },
+  {
+    "id": 165,
+    "title": "Game Programming Patterns",
+    "author": "Robert Nystrom",
+    "genre": "Game Development",
+    "year": 2014,
+    "image": "https://covers.openlibrary.org/b/isbn/9780990582151-L.jpg",
+    "description": "Design patterns for game development. Learn architectural patterns for games."
+  },
+  {
+    "id": 166,
+    "title": "Unity in Action",
+    "author": "Joe Hocking",
+    "genre": "Game Development",
+    "year": 2018,
+    "image": "https://covers.openlibrary.org/b/isbn/9781617294969-L.jpg",
+    "description": "Multiplatform game development in C# with Unity 3D engine."
+  },
+  {
+    "id": 167,
+    "title": "Real-Time Rendering",
+    "author": "Tomas Akenine-Möller, Eric Haines, Naty Hoffman",
+    "genre": "Computer Graphics",
+    "year": 2018,
+    "image": "https://covers.openlibrary.org/b/isbn/9781138627000-L.jpg",
+    "description": "Comprehensive guide to real-time computer graphics and rendering techniques."
+  },
+  {
+    "id": 168,
+    "title": "Computer Graphics: Principles and Practice",
+    "author": "John F. Hughes, Andries van Dam, Morgan McGuire",
+    "genre": "Computer Graphics",
+    "year": 2013,
+    "image": "https://covers.openlibrary.org/b/isbn/9780321399526-L.jpg",
+    "description": "Comprehensive introduction to computer graphics algorithms and techniques."
+  },
+  {
+    "id": 169,
+    "title": "Information Security: Principles and Practice",
+    "author": "Mark Stamp",
+    "genre": "Cybersecurity",
+    "year": 2011,
+    "image": "https://covers.openlibrary.org/b/isbn/9780470626399-L.jpg",
+    "description": "Comprehensive introduction to information security principles and practices."
+  },
+  {
+    "id": 170,
+    "title": "The Web Application Hacker's Handbook",
+    "author": "Dafydd Stuttard, Marcus Pinto",
+    "genre": "Cybersecurity",
+    "year": 2011,
+    "image": "https://covers.openlibrary.org/b/isbn/9781118026472-L.jpg",
+    "description": "Finding and exploiting security flaws in web applications."
+  },
+  {
+    "id": 171,
+    "title": "Cryptography and Network Security",
+    "author": "William Stallings",
+    "genre": "Cybersecurity",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9780134444284-L.jpg",
+    "description": "Principles and practice of cryptography and network security."
+  },
+  {
+    "id": 172,
+    "title": "Ethical Hacking and Penetration Testing Guide",
+    "author": "Rafay Baloch",
+    "genre": "Cybersecurity",
+    "year": 2014,
+    "image": "https://covers.openlibrary.org/b/isbn/9781482231611-L.jpg",
+    "description": "Comprehensive guide to ethical hacking and penetration testing techniques."
+  },
+  {
+    "id": 173,
+    "title": "Digital Forensics with Open Source Tools",
+    "author": "Cory Altheide, Harlan Carvey",
+    "genre": "Cybersecurity",
+    "year": 2011,
+    "image": "https://covers.openlibrary.org/b/isbn/9781597495868-L.jpg",
+    "description": "Using open source tools for digital forensics investigations."
+  },
+  {
+    "id": 174,
+    "title": "The Art of Memory Forensics",
+    "author": "Michael Hale Ligh, Andrew Case, Jamie Levy, AAron Walters",
+    "genre": "Cybersecurity",
+    "year": 2014,
+    "image": "https://covers.openlibrary.org/b/isbn/9781118825099-L.jpg",
+    "description": "Detecting malware and threats in Windows, Linux, and Mac memory."
+  },
+  {
+    "id": 175,
+    "title": "Computer Vision: Algorithms and Applications",
+    "author": "Richard Szeliski",
+    "genre": "Computer Vision",
+    "year": 2022,
+    "image": "https://covers.openlibrary.org/b/isbn/9783030343712-L.jpg",
+    "description": "Comprehensive introduction to computer vision algorithms and applications."
+  },
+  {
+    "id": 176,
+    "title": "Programming Computer Vision with Python",
+    "author": "Jan Erik Solem",
+    "genre": "Computer Vision",
+    "year": 2012,
+    "image": "https://covers.openlibrary.org/b/isbn/9781449316549-L.jpg",
+    "description": "Tools and algorithms for analyzing images with Python and OpenCV."
+  },
+  {
+    "id": 177,
+    "title": "Natural Language Processing with Python",
+    "author": "Steven Bird, Ewan Klein, Edward Loper",
+    "genre": "Natural Language Processing",
+    "year": 2009,
+    "image": "https://covers.openlibrary.org/b/isbn/9780596516499-L.jpg",
+    "description": "Analyzing text with the Natural Language Toolkit (NLTK) in Python."
+  },
+  {
+    "id": 178,
+    "title": "Speech and Language Processing",
+    "author": "Daniel Jurafsky, James H. Martin",
+    "genre": "Natural Language Processing",
+    "year": 2019,
+    "image": "https://covers.openlibrary.org/b/isbn/9780131873216-L.jpg",
+    "description": "Comprehensive introduction to computational linguistics and NLP."
+  },
+  {
+    "id": 179,
+    "title": "Reinforcement Learning: An Introduction",
+    "author": "Richard S. Sutton, Andrew G. Barto",
+    "genre": "Machine Learning",
+    "year": 2018,
+    "image": "https://covers.openlibrary.org/b/isbn/9780262039246-L.jpg",
+    "description": "Comprehensive introduction to reinforcement learning algorithms and theory."
+  },
+  {
+    "id": 180,
+    "title": "The Hundred-Page Machine Learning Book",
+    "author": "Andriy Burkov",
+    "genre": "Machine Learning",
+    "year": 2019,
+    "image": "https://covers.openlibrary.org/b/isbn/9781999579500-L.jpg",
+    "description": "Concise yet comprehensive introduction to machine learning concepts."
+  },
+  {
+    "id": 181,
+    "title": "Blockchain Basics",
+    "author": "Daniel Drescher",
+    "genre": "Blockchain",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9781484226032-L.jpg",
+    "description": "A non-technical introduction in 25 steps to blockchain technology."
+  },
+  {
+    "id": 182,
+    "title": "Mastering Bitcoin",
+    "author": "Andreas M. Antonopoulos",
+    "genre": "Blockchain",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9781491954386-L.jpg",
+    "description": "Programming the open blockchain. Technical guide to Bitcoin and cryptocurrencies."
+  },
+  {
+    "id": 183,
+    "title": "Ethereum: Blockchains, Digital Assets, Smart Contracts",
+    "author": "Henning Diedrich",
+    "genre": "Blockchain",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9781523930494-L.jpg",
+    "description": "Decentralized autonomous organizations. Guide to Ethereum blockchain platform."
+  },
+  {
+    "id": 184,
+    "title": "IoT Fundamentals: Networking Technologies, Protocols, and Use Cases",
+    "author": "David Hanes, Gonzalo Salgueiro, Patrick Grossetete",
+    "genre": "Internet of Things",
+    "year": 2017,
+    "image": "https://covers.openlibrary.org/b/isbn/9781587144561-L.jpg",
+    "description": "Comprehensive guide to IoT networking technologies and applications."
+  },
+  {
+    "id": 185,
+    "title": "Building the Internet of Things",
+    "author": "Maciej Kranz",
+    "genre": "Internet of Things",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9781119257660-L.jpg",
+    "description": "Implement new business models, disrupt competitors, transform your industry."
+  },
+  {
+    "id": 186,
+    "title": "Quantum Computing: An Applied Approach",
+    "author": "Hidary Sherry Susskind",
+    "genre": "Quantum Computing",
+    "year": 2019,
+    "image": "https://covers.openlibrary.org/b/isbn/9783030239213-L.jpg",
+    "description": "Practical introduction to quantum computing algorithms and applications."
+  },
+  {
+    "id": 187,
+    "title": "Programming Quantum Computers",
+    "author": "Eric R. Johnston, Nic Harrigan, Mercedes Gimeno-Segovia",
+    "genre": "Quantum Computing",
+    "year": 2019,
+    "image": "https://covers.openlibrary.org/b/isbn/9781492039686-L.jpg",
+    "description": "Essential algorithms and code samples for quantum programming."
+  },
+  {
+    "id": 188,
+    "title": "Augmented Reality: Principles and Practice",
+    "author": "Dieter Schmalstieg, Tobias Hollerer",
+    "genre": "Augmented Reality",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9780321883575-L.jpg",
+    "description": "Comprehensive guide to augmented reality technology and applications."
+  },
+  {
+    "id": 189,
+    "title": "Virtual Reality Technology",
+    "author": "Grigore Burdea, Philippe Coiffet",
+    "genre": "Virtual Reality",
+    "year": 2003,
+    "image": "https://covers.openlibrary.org/b/isbn/9780471464082-L.jpg",
+    "description": "Comprehensive introduction to virtual reality systems and applications."
+  },
+  {
+    "id": 190,
+    "title": "3D User Interfaces: Theory and Practice",
+    "author": "Doug A. Bowman, Ernst Kruijff, Joseph J. LaViola Jr.",
+    "genre": "Human-Computer Interaction",
+    "year": 2004,
+    "image": "https://covers.openlibrary.org/b/isbn/9780201758672-L.jpg",
+    "description": "Design and implementation of 3D user interfaces for VR and AR."
+  },
+  {
+    "id": 191,
+    "title": "Human-Computer Interaction",
+    "author": "Alan Dix, Janet Finlay, Gregory D. Abowd, Russell Beale",
+    "genre": "Human-Computer Interaction",
+    "year": 2003,
+    "image": "https://covers.openlibrary.org/b/isbn/9780130461094-L.jpg",
+    "description": "Comprehensive introduction to HCI principles, methods, and design."
+  },
+  {
+    "id": 192,
+    "title": "The Design of Everyday Things",
+    "author": "Don Norman",
+    "genre": "Design",
+    "year": 2013,
+    "image": "https://covers.openlibrary.org/b/isbn/9780465050659-L.jpg",
+    "description": "Fundamental principles of human-centered design and usability."
+  },
+  {
+    "id": 193,
+    "title": "Don't Make Me Think",
+    "author": "Steve Krug",
+    "genre": "UX Design",
+    "year": 2013,
+    "image": "https://covers.openlibrary.org/b/isbn/9780321965516-L.jpg",
+    "description": "A common sense approach to web usability and user experience design."
+  },
+  {
+    "id": 194,
+    "title": "About Face: The Essentials of Interaction Design",
+    "author": "Alan Cooper, Robert Reimann, David Cronin, Christopher Noessel",
+    "genre": "UX Design",
+    "year": 2014,
+    "image": "https://covers.openlibrary.org/b/isbn/9781118766576-L.jpg",
+    "description": "Comprehensive guide to interaction design principles and methods."
+  },
+  {
+    "id": 195,
+    "title": "Lean UX",
+    "author": "Jeff Gothelf, Josh Seiden",
+    "genre": "UX Design",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9781491953600-L.jpg",
+    "description": "Designing great products with agile teams through lean UX methods."
+  },
+  {
+    "id": 196,
+    "title": "Sprint: How to Solve Big Problems",
+    "author": "Jake Knapp, John Zeratsky, Braden Kowitz",
+    "genre": "Design Thinking",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9781501121746-L.jpg",
+    "description": "Test new ideas in just five days using the design sprint methodology."
+  },
+  {
+    "id": 197,
+    "title": "The Lean Startup",
+    "author": "Eric Ries",
+    "genre": "Business",
+    "year": 2011,
+    "image": "https://covers.openlibrary.org/b/isbn/9780307887894-L.jpg",
+    "description": "How today's entrepreneurs use continuous innovation to create radically successful businesses."
+  },
+  {
+    "id": 198,
+    "title": "Zero to One",
+    "author": "Peter Thiel, Blake Masters",
+    "genre": "Business",
+    "year": 2014,
+    "image": "https://covers.openlibrary.org/b/isbn/9780804139298-L.jpg",
+    "description": "Notes on startups, or how to build the future through innovative thinking."
+  },
+  {
+    "id": 199,
+    "title": "The Innovator's Dilemma",
+    "author": "Clayton M. Christensen",
+    "genre": "Business",
+    "year": 2016,
+    "image": "https://covers.openlibrary.org/b/isbn/9780062060242-L.jpg",
+    "description": "When new technologies cause great firms to fail. Classic business strategy book."
+  },
+  {
+    "id": 200,
+    "title": "Good to Great",
+    "author": "Jim Collins",
+    "genre": "Business",
+    "year": 2001,
+    "image": "https://covers.openlibrary.org/b/isbn/9780066620992-L.jpg",
+    "description": "Why some companies make the leap... and others don't. Research-based insights."
+  },
+  {
     "id": 202,
     "title": "Data Structures and Algorithm Analysis in C++",
     "author": "Mark Allen Weiss",

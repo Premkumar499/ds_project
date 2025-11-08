@@ -1,6 +1,0 @@
-[
-  {"id": 101, "title": "C Programming", "author": "Dennis Ritchie", "genre": "Programming"},
-  {"id": 202, "title": "Data Structures", "author": "Mark Allen Weiss", "genre": "Computer Science"},
-  {"id": 303, "title": "Artificial Intelligence", "author": "Stuart Russell", "genre": "AI"},
-  {"id": 404, "title": "Python Basics", "author": "Guido van Rossum", "genre": "Programming"}
-]
