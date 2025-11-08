@@ -1,0 +1,38 @@
+[
+  {
+    "id": 101,
+    "title": "The C Programming Language",
+    "author": "Brian Kernighan & Dennis Ritchie",
+    "genre": "Programming",
+    "year": 1988,
+    "image": "https://covers.openlibrary.org/b/isbn/0131103628-L.jpg",
+    "description": "The definitive guide to C programming by the creators of the language. Known as the 'K&R' book, it's the classic reference for learning C."
+  },
+  {
+    "id": 202,
+    "title": "Data Structures and Algorithm Analysis in C++",
+    "author": "Mark Allen Weiss",
+    "genre": "Computer Science",
+    "year": 2014,
+    "image": "https://covers.openlibrary.org/b/isbn/9780132847377-L.jpg",
+    "description": "A comprehensive textbook covering data structures and algorithms with C++ implementations. Widely used in computer science courses."
+  },
+  {
+    "id": 303,
+    "title": "Artificial Intelligence: A Modern Approach",
+    "author": "Stuart Russell & Peter Norvig",
+    "genre": "Artificial Intelligence",
+    "year": 2020,
+    "image": "https://covers.openlibrary.org/b/isbn/9780134610993-L.jpg",
+    "description": "The leading textbook in artificial intelligence. Comprehensive coverage of AI concepts, algorithms, and applications used worldwide."
+  },
+  {
+    "id": 404,
+    "title": "Python Crash Course",
+    "author": "Eric Matthes",
+    "genre": "Programming",
+    "year": 2019,
+    "image": "https://covers.openlibrary.org/b/isbn/9781593279288-L.jpg",
+    "description": "A hands-on introduction to programming with Python. Learn programming fundamentals and build practical projects."
+  }
+]
